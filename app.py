@@ -14,3 +14,15 @@ LABEL_MAP = {0: "Non-cracked", 1: "Cracked"}
 DEFAULT_THRESHOLD = 0.5  
 
 st.set_page_config(page_title="Bridge Deck Crack Detector", page_icon="🌉", layout="wide")
+
+
+st.markdown("""
+<style>
+    .block-container { padding-top: 2rem; }
+    div[data-testid="stMetric"] {
+        background-color: rgba(128,128,128,0.08);
+        border-radius: 10px;
+        padding: 12px 16px;
+    }
+</style>
+""", unsafe_allow_html=True)
