@@ -26,3 +26,32 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
+# ---------------------------------------------------------------------------
+# Model loading — cached so it only downloads/loads once per session, not
+# on every rerun
+# ---------------------------------------------------------------------------
+@st.cache_resource(show_spinner="Downloading model from Hugging Face...")
+def load_model():
+    try:
+        model_path = hf_hub_download(repo_id=HF_REPO_ID, filename=HF_FILENAME)
+    except Exception as e:
+        st.error(
+            f"Could not download model from '{HF_REPO_ID}/{HF_FILENAME}'. "
+            f"Check the repo id, filename, and that the repo is public "
+            f"(or that you've set HF_TOKEN if it's private). Error: {e}"
+        )
+        st.stop()
+
+    try:
+        model = tf.keras.models.load_model(model_path)
+    except Exception as e:
+        st.error(
+            f"Model file downloaded but failed to load. This is usually a "
+            f"TensorFlow/Keras version mismatch between training and this "
+            f"environment — check requirements.txt pins the same major TF "
+            f"version you trained with. Error: {e}"
+        )
+        st.stop()
+
+    return model
