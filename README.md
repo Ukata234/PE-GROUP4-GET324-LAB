@@ -1,5 +1,17 @@
 # PE-GROUP4-GET324-LAB
 
+# Contributors:
+```
+UKATA JOSHUA EVARR		22/EG/PE/1513                        AMBA GODSWILL ANIETIE		22/EG/PE/1533
+UDOKANG, BLESSING     22/EG/PE/1503                        USOH DIVINE BENJAAMIN		22EG/PE/1473
+MICHAEL GODSPOWER		  22/EG/PE/1543                        OLIVER, SAVIOUR UDOH		  22/EG/PE/1553
+GODWIN DAVID 				  22/EG/PE/1523                        DANIEL EBENEZER			    22/EG/PE/1483
+TOM INIUBONG				  22/EG/PE/1493                        EDUOE, EMMANUEL 			    23/EG/PE/003
+EFFIONG EMMANUEL			23/EG/PE/033                         JAMES ETIMBUK DAVID		  23/EG/PE/043
+SUNDAY ANIEFIOK 			23/EG/PE/013                         IBANGA SAMUEL			      24/EG/PE/163
+```
+
+
 # Concrete Bridge Deck Crack Detection
 
 Cracked vs Non-cracked classifier for SDNET2018 bridge-deck image patches. Two models
